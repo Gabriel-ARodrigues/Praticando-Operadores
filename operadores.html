@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praticando Operações</title>
+    <style>
+      input#res1,
+      #res2,
+      #res3 {
+        margin-top: 20px;
+      }
+      body{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Multiplicando Valores</h1>
+      <input type="number" name="txtn1" id="txtn1" /> * <input
+        type="number"
+        name="txtn2"
+        id="txtn2"
+      />
+      <input type="button" value="Multiplique" onclick="multiplique()" />
+      <input
+        type="text"
+        name="res1"
+        id="res1"
+        placeholder="Resultado!"
+        value=""
+      />
+    </div>
+    <div>
+      <h1>Dividindo Valores</h1>
+      <input type="number" name="txtn3" id="txtn3" /> / <input
+        type="number"
+        name="txtn4"
+        id="txtn4"
+      />
+      <input type="button" value="Divida" onclick="divida()" />
+      <input
+        type="text"
+        name="res2"
+        id="res2"
+        placeholder="Resultado!"
+        value=""
+      />
+    </div>
+    <div>
+      <h1>Subtraindo Valores</h1>
+      <input type="number" name="txtn5" id="txtn5" /> - <input
+        type="number"
+        name="txtn6"
+        id="txtn6"
+      />
+      <input type="button" value="Subtraia" onclick="subtraia()" />
+      <input
+        type="text"
+        name="res3"
+        id="res3"
+        placeholder="Resultado!"
+        value=""
+      />
+    </div>
+    <div>
+      <h1>Calculando a metragem cúbica</h1>
+      <input type="number" name="alt1" id="alt1" placeholder="Altura" /> X <input
+        type="number"
+        name="comp1"
+        id="comp1"
+        placeholder="Comprimento"
+      /> X <input type="number" name="larg1" id="larg1" placeholder="Largura" />
+      <input type="button" value="Calcule" onclick="calcule()" />
+      <input
+        type="text"
+        name="metro3"
+        id="metro3"
+        placeholder="Metragem Cúbica!"
+        value=""
+      />
+    </div>
+    <script>
+      function multiplique() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.getElementById("txtn2");
+        var r1 = document.getElementById("res1");
+        n1 = Number(tn1.value);
+        n2 = Number(tn2.value);
+        var resm = n1 * n2;
+        r1.value = resm;
+      }
+
+      function divida() {
+        var tn3 = document.getElementById("txtn3");
+        var tn4 = document.getElementById("txtn4");
+        var r2 = document.getElementById("res2");
+        n3 = Number.parseFloat(tn3.value);
+        n4 = Number.parseFloat(tn4.value);
+        var resm2 = n3 / n4;
+        r2.value = resm2;
+      }
+
+      function subtraia() {
+        var tn5 = document.getElementById("txtn5");
+        var tn6 = document.getElementById("txtn6");
+        var r3 = document.getElementById("res3");
+        n5 = Number(tn5.value);
+        n6 = Number(tn6.value);
+        resm3 = n5 - n6;
+        r3.value = resm3;
+      }
+
+      function calcule() {
+        var at1 = Number(document.getElementById("alt1").value);
+        var cp1 = Number(document.getElementById("comp1").value);
+        var lg1 = Number(document.getElementById("larg1").value);
+        var m3 = document.getElementById("metro3");
+        var rcalc = at1 * cp1 * lg1;
+        m3.value = rcalc;
+      }
+    </script>
+  </body>
+</html>
